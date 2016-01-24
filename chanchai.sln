@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ChanChai", "Community\ChanChai.vbproj", "{0C722A6E-A9D2-45FF-87FC-D48E23C8926B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ChanChai_Setup", "ChanChai_Setup\ChanChai_Setup.vdproj", "{E095A145-85FA-4883-BBAA-48DE73763DD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C722A6E-A9D2-45FF-87FC-D48E23C8926B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C722A6E-A9D2-45FF-87FC-D48E23C8926B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C722A6E-A9D2-45FF-87FC-D48E23C8926B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C722A6E-A9D2-45FF-87FC-D48E23C8926B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E095A145-85FA-4883-BBAA-48DE73763DD5}.Debug|Any CPU.ActiveCfg = Debug
+		{E095A145-85FA-4883-BBAA-48DE73763DD5}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

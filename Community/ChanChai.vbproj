@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0C722A6E-A9D2-45FF-87FC-D48E23C8926B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Community.My.MyApplication</StartupObject>
+    <RootNamespace>Community</RootNamespace>
+    <AssemblyName>Community</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Community.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Community.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADODB.vb" />
+    <Compile Include="Billing\billing1.Designer.vb">
+      <DependentUpon>billing1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing\billing1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing\dsBilling.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBilling.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="chanchai_krDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>chanchai_krDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="chanchai_krDataSet.vb">
+      <DependentUpon>chanchai_krDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Product\frmEdit.Designer.vb">
+      <DependentUpon>frmEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product\frmEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\frmScreen.Designer.vb">
+      <DependentUpon>frmScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product\frmScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\frmShirt.Designer.vb">
+      <DependentUpon>frmShirt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product\frmShirt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\frmType1.Designer.vb">
+      <DependentUpon>frmType1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product\frmType1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\dsbala.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsbala.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\dsSale.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSale.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmInEx.Designer.vb">
+      <DependentUpon>frmInEx.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmInEx.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmrptbala.Designer.vb">
+      <DependentUpon>frmrptbala.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmrptbala.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmrptsalep.Designer.vb">
+      <DependentUpon>frmrptsalep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmrptsalep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\frmBalance.Designer.vb">
+      <DependentUpon>frmBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\frmBalance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\frmCir.Designer.vb">
+      <DependentUpon>frmCir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Member\frmCir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\frmSale1.Designer.vb">
+      <DependentUpon>frmSale1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\frmSale1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\frmSale2.Designer.vb">
+      <DependentUpon>frmSale2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\frmSale2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\frmSale3.Designer.vb">
+      <DependentUpon>frmSale3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\frmSale3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Title\frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Title\frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\frmRptInEx.designer.vb">
+      <DependentUpon>frmRptInEx.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\frmRptInEx.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\frmRptSale.designer.vb">
+      <DependentUpon>frmRptSale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\frmRptSale.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\frmSale.designer.vb">
+      <DependentUpon>frmSale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\frmSale.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\frmType.designer.vb">
+      <DependentUpon>frmType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product\frmType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\frmMember.Designer.vb">
+      <DependentUpon>frmMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Member\frmMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Billing\billing1.resx">
+      <DependentUpon>billing1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\rptbilling3.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\rptbilling2.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing\rptbilling1.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\frmEdit.resx">
+      <DependentUpon>frmEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\frmScreen.resx">
+      <DependentUpon>frmScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\frmShirt.resx">
+      <DependentUpon>frmShirt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\frmType1.resx">
+      <DependentUpon>frmType1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmInEx.resx">
+      <DependentUpon>frmInEx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmrptbala.resx">
+      <DependentUpon>frmrptbala.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmrptsalep.resx">
+      <DependentUpon>frmrptsalep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptbala.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\rptInEx.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptSalep.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\frmBalance.resx">
+      <DependentUpon>frmBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\frmCir.resx">
+      <DependentUpon>frmCir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\frmSale1.resx">
+      <DependentUpon>frmSale1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\frmSale2.resx">
+      <DependentUpon>frmSale2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\frmSale3.resx">
+      <DependentUpon>frmSale3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Title\frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\frmRptInEx.resx">
+      <DependentUpon>frmRptInEx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\frmRptSale.resx">
+      <DependentUpon>frmRptSale.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\frmSale.resx">
+      <DependentUpon>frmSale.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\frmType.resx">
+      <DependentUpon>frmType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\frmMember.resx">
+      <DependentUpon>frmMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Billing\dsBilling.xsc">
+      <DependentUpon>dsBilling.xsd</DependentUpon>
+    </None>
+    <None Include="Billing\dsBilling.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBilling.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Billing\dsBilling.xss">
+      <DependentUpon>dsBilling.xsd</DependentUpon>
+    </None>
+    <None Include="chanchai_krDataSet.xsc">
+      <DependentUpon>chanchai_krDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="chanchai_krDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>chanchai_krDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="chanchai_krDataSet.xss">
+      <DependentUpon>chanchai_krDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\dsbala.xsc">
+      <DependentUpon>dsbala.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\dsbala.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsbala.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\dsbala.xss">
+      <DependentUpon>dsbala.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\dsSale.xsc">
+      <DependentUpon>dsSale.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\dsSale.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSale.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\dsSale.xss">
+      <DependentUpon>dsSale.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\เพิ่มลูกค้า.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ขาย1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\78.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\781.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\87.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\จัดการ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="config\constr.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
